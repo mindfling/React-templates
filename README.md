@@ -8,17 +8,21 @@ ME React js course templates
 
 Прямо по шаблону in PowerShell
 
-it works at Win7
+Vite5 it must works at Win7 but still doesn't
 
 ```bash
 npm create vite@5 . -- --template react
 ```
 
 ```sh
-npm i
+npm install
 ```
 
-## React + Vite
+```sh
+npm run dev
+```
+
+## React + Vite5.4.10
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
