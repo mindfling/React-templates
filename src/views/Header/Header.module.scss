@@ -1,0 +1,50 @@
+@import '../../styles/_variables.scss';
+
+.header {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background-color: $light-bg;
+  border-bottom: 1px solid $form;
+  /** */
+  // flex-grow: 1; /* for footer */
+}
+
+/* container_header */
+.container {
+  display: grid;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  grid-template-areas:
+    "logo navigation"
+    "search search";
+
+  @media (min-width: 820px) {
+    grid-template-areas: "logo search navigation";
+    grid-template-columns: 94px 1fr auto;
+  }
+}
+
+.logo {
+  grid-area: logo;
+  width: 94px;
+}
+
+.search {
+  grid-area: search;
+  width: 100%;
+
+  @media (min-width: 820px) {
+    justify-self: center;
+    max-width: 408px;
+  }
+
+  @media (min-width: 1120px) {
+    max-width: 512px;
+  }
+}
+
+.navigation {
+  grid-area: navigation;
+  justify-self: end;
+}

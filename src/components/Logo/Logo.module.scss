@@ -1,0 +1,24 @@
+@import '../../styles/variables';
+
+.logo {
+  width: 90px;
+  display: block;
+  border-radius: 4px;
+  outline-offset: 2px;
+  outline: 2px solid transparent;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $violet;
+  }
+
+
+  &:focus-visible {
+    outline-color: #969EAE;
+  }
+}
+
+.img {
+  width: 100%;
+}
