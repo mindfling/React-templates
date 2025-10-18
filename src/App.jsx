@@ -1,21 +1,13 @@
-import { NotFoundPage } from './components/NotFoundPage/NotFoundPage';
-import { Container } from './views/Container/Container';
-import { Footer } from './views/Footer/Footer';
 import { Header } from './views/Header/Header';
+import { NotFoundPage } from './components/NotFoundPage/NotFoundPage';
+// import { Container } from './views/Container/Container';
 
 
-const App = () => {
-  
-  const myAppTitle = 'Новое приложение';
-  
-  return (
+const App = () => (
     <>
       <Header />
       <NotFoundPage />
-      <Footer />
     </>
   );
-}
-
 
 export default App;
