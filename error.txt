@@ -1,0 +1,59 @@
+
+> fast-vite-react_js-swc@0.0.0 dev
+> vite --open
+
+failed to load config from E:\LearningJS\test-lock\vite.config.js
+error when starting dev server:
+Error: Failed to load native binding
+    at Object.<anonymous> (E:\LearningJS\test-lock\node_modules\@swc\core\binding.js:333:11)
+    at Module._compile (node:internal/modules/cjs/loader:1198:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1252:10)
+    at Module.load (node:internal/modules/cjs/loader:1076:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:911:12)
+    at Module.require (node:internal/modules/cjs/loader:1100:19)
+    at require (node:internal/modules/cjs/helpers:108:18)
+    at Object.<anonymous> (E:\LearningJS\test-lock\node_modules\@swc\core\index.js:49:17)
+    at Module._compile (node:internal/modules/cjs/loader:1198:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1252:10)
+
+
+
+
+
+
+E:\LearningJS\test-lock\node_modules\rollup\dist\native.js:83
+                throw new Error(
+                      ^
+
+Error: Cannot find module 
+
+@rollup/rollup-win32-ia32-msvc
+
+. npm has a bug related to optional package-lock.json and node_modules directory.
+    at requireWithFriendlyError 
+    (
+      E:\LearningJS\test-lock\node_modules\rollup\dist\native.js
+      :
+    at Object.<anonymous> (E:\LearningJS\test-lock\node_modules\rollup\dist\native.js:92:76)
+    ... 2 lines matching cause stack trace ...
+    at Module.load (node:internal/modules/cjs/loader:1076:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:911:12)
+    at ModuleWrap.<anonymous> (node:internal/modules/esm/translators:169:29)
+    at ModuleJob.run (node:internal/modules/esm/module_job:193:25)
+    at async Promise.all (index 0)
+    at async ESMLoader.import (node:internal/modules/esm/loader:530:24) {
+  [cause]: Error: The specified procedure could not be found.
+  \\?\E:\LearningJS\test-lock\node_modules\@rollup\rollup-win32-ia32-msvc\rollup.win32-ia32-
+      at Object.Module._extensions..node (node:internal/modules/cjs/loader:1282:18)
+      at Module.load (node:internal/modules/cjs/loader:1076:32)
+      at Function.Module._load (node:internal/modules/cjs/loader:911:12)
+      at Module.require (node:internal/modules/cjs/loader:1100:19)
+      at require (node:internal/modules/cjs/helpers:108:18)
+      at requireWithFriendlyError (E:\LearningJS\test-lock\node_modules\rollup\dist\native.j
+      at Object.<anonymous> (E:\LearningJS\test-lock\node_modules\rollup\dist\native.js:92:7
+      at Module._compile (node:internal/modules/cjs/loader:1198:14)
+      at Object.Module._extensions..js (node:internal/modules/cjs/loader:1252:10)
+      at Module.load (node:internal/modules/cjs/loader:1076:32) {
+    code: 'ERR_DLOPEN_FAILED'
+  }
+}
