@@ -1,8 +1,5 @@
-import { useDispatch, useSelector } from 'react-redux';
 import { Footer } from './views/Footer/Footer';
 import { Header } from './views/Header/Header';
-import { useEffect } from 'react';
-import { fetchAccessToken } from './store/auth/authSlice';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { Container } from './views/Container/Container';
 import { NotFoundPage } from './components/NotFoundPage/NotFoundPage';
