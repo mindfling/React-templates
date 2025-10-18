@@ -1,8 +1,6 @@
 // * header
 import { Container } from '../Container/Container';
 import { Logo } from '../../components/Logo/Logo';
-// import { SearchForm } from '../../components/SearchForm/SearchForm';
-// import { Navigation } from '../../components/Navigation/Navigation';
 import style from './Header.module.scss';
 
 export const Header = () => (

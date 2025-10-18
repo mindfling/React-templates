@@ -1,10 +1,8 @@
 // * footer
 import { Container } from '../Container/Container';
 import { Logo } from '../../components/Logo/Logo';
-// import { Contacts } from '../../components/Contacts/Contacts';
-// import { Developer } from '../../components/Developer/Developer';
-// import { Copy } from '../../components/Copy/Copy';
 import s from './Footer.module.scss';
+import { SITE_TITLE } from '../../const';
 
 export const Footer = () => {
     
@@ -12,6 +10,7 @@ export const Footer = () => {
   <footer className={s.footer}>
     <Container className={s.container_footer}>
       <Logo className={s.logo}/>
+      <p className="footer__text">{SITE_TITLE}</p>
     </Container >
   </footer>
 )}
