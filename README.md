@@ -16,7 +16,10 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 
-it should be working at Win7 Node 16.20.2
+it should be working at Win7
+Node 16.20.2
+npm 9.0.0
+
 
   vite 5.0.0
   vite 5.0.8
@@ -29,14 +32,22 @@ rollup@4.9.4
 plugin-react-swc ?
 
 @swc/core 1.3.96
-@swc/core 1.3.102
+@swc/core 1.3.102 !!!
 
 // вручную выставляем подходящие версии в package-lock.json
 // Но сначала в package.json
 
 
 ```
-npm ci
+npm ci // not use it
 ```
+
+use it
+```
+npm i
+```
+
+keep save package-lock.json
+
 
 ## Всегда сохраняйте рабочий package-lock.json
