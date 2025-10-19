@@ -1,0 +1,39 @@
+{
+  "name": "initblanknotempty",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "build:dev": "set NODE_ENV=development&&webpack",
+    "build:prod": "set NODE_ENV=production&&webpack",
+    "start": "set NODE_ENV=development&&webpack server",
+    "clear": "rd /s /q dist",
+    "test": "echo \"no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@babel/cli": "^7.28.3",
+    "@babel/core": "^7.28.4",
+    "@babel/preset-env": "^7.28.3",
+    "@babel/preset-react": "^7.27.1",
+    "babel-loader": "^10.0.0",
+    "css-loader": "^7.1.2",
+    "eslint-plugin-react": "^7.37.5",
+    "html-webpack-plugin": "^5.6.4",
+    "mini-css-extract-plugin": "^2.9.4",
+    "postcss": "^8.5.6",
+    "postcss-loader": "^8.2.0",
+    "postcss-preset-env": "^10.4.0",
+    "sass": "^1.93.2",
+    "sass-loader": "^16.0.5",
+    "webpack": "^5.102.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
