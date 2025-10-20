@@ -60,6 +60,10 @@ module.exports = {
         generator: {
           filename: 'fonts/[hash][ext]',
         }
+      },
+      {
+        test: /\.html$/i,
+        loader: 'html-loader',
       }
     ]
   }
