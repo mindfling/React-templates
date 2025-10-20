@@ -6,16 +6,16 @@ const mode = process.env.NODE_ENV || 'development';
 
 module.exports = {
   mode,
-  devtool: mode === 'pro',
-  entry: path.resolve(__dirname, 'src', 'index.jsx'),
+  devtool: mode === "pro",
+  entry: path.resolve(__dirname, "src", "index.jsx"),
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, "dist"),
     clean: true,
-    filename: '[name][contenthash].js',
-    assetModuleFilename: 'assets/[hash][ext][query]',
+    filename: "[name][contenthash].js",
+    assetModuleFilename: "asset/[hash][ext][query]",
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    extensions: [".js", ".jsx", ".ts", ".tsx"],
   },
   devServer: {
     port: 3000,
@@ -24,7 +24,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'public', 'index.html'),
+      template: path.resolve(__dirname, "public", "index.html"),
     }),
     new MiniCssExtractPlugin(),
   ],
@@ -33,38 +33,46 @@ module.exports = {
       {
         test: /\.[tj]sx?/i,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
             presets: ["@babel/preset-react", "@babel/preset-env"],
-          }
-        }
+          },
+        },
       },
       {
         test: /\.(sa|sc|c)ss$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', {
-          loader: 'postcss-loader',
-          options: {
-            postcssOptions: {
-              plugins: ['postcss-preset-env']
-            }
-          }
-        }, 'sass-loader']
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: ["postcss-preset-env"],
+              },
+            },
+          },
+          "sass-loader",
+        ],
       },
       {
-        test: /\.(jpg|jpeg|gif|svg|png)$/i,
-        type: 'assets/resourse'
+        test: /\.(png|jpg|gif|svg|ico)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "images/image[hash][ext]",
+        },
       },
       {
         test: /\.(woff|woff2)$/i,
-        type: 'assets/resourse',
+        type: "asset/resource",
         generator: {
-          filename: 'fonts/[hash][ext]',
-        }
+          filename: "fonts/[hash][name][ext]",
+        },
       },
       {
         test: /\.html$/i,
-        loader: 'html-loader',
-      }
-    ]
-  }
-}
+        loader: "html-loader",
+      },
+    ],
+  },
+};
