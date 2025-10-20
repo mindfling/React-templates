@@ -7,7 +7,5 @@ import './index.css';
 
 console.log(chalk.bgGreen.black('main jsx'));
 
-const rootElem = document.querySelector('#root');
-const root = createRoot(rootElem);
-
+const root = createRoot(document.querySelector('#root'));
 root.render(<App />);
