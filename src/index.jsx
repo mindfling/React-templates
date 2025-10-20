@@ -3,19 +3,8 @@ import { createRoot } from "react-dom/client";
 import Module from './Module';
 
 const selector = '#root';
-console.log('selector: ', selector);
 const root = document.querySelector(selector);
-console.log('root: ', root);
-
-
 const rootElem = createRoot(root);
-console.log('rootElem: ', rootElem);
-
-const html = `
-
-`;
-
-console.log(`html`, html);
 
 
 rootElem.render(
@@ -30,7 +19,6 @@ rootElem.render(
           Компьютерная индустрия выпускает до тысячи игр ежегодно. Как
           рассчитанных на глубину, так и простых, для обычных пользователей.
         </p>
-
         <p className="text">
           Обычно игра активно живет с полгода. Расходится законными и
           незаконными каналами, обсуждается. В ней вылавливаются все заложенные
@@ -60,8 +48,7 @@ rootElem.render(
           поступить на действительную военную службу. Кого-то это отпугивает, но
           многих, наоборот, привлекает. Я немного играл в этих «солдатиков для
           взрослых». Игра, на мой взгляд, безобидная и спокойная. Расхаживаешь с
-          чашкой кофе, в красивом мундире по штабу, заполненному вышколенными
-          адъютантами, и говоришь: «А не сбросить ли нам термоядерную бомбу....
+          чашкой кофе...
         </p>
 
         <a
