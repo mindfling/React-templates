@@ -59,3 +59,31 @@ and fixed dependences
     "vite": "5.4.10"
   }
 ```
+
+
+## StrictMode
+
+```jsx
+  <StrictMode>
+    <App />
+  </StrictMode>
+```
+
+
+## React Fragment
+
+```jsx
+<React.Fragment>
+</React.Fragment>
+```
+
+```jsx
+<Fragment>
+</Fragment>
+```
+
+empty fragment
+```jsx
+<>
+</>
+```
