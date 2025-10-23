@@ -2,11 +2,14 @@ import chalk from 'chalk';
 
 
 function App() {
-  console.log(chalk.magenta('App'))
+  console.log(chalk.blueBright('App hallo'));
 
   return (
     <>
-      <h1 className="title">App Заголовок</h1>
+      <div className="container">
+        <h1 className="title">Заголовок</h1>
+        <h2 className="subtitle">Подзаголовок</h2>
+      </div>
     </>
   );
 }
