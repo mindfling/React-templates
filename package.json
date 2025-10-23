@@ -1,7 +1,7 @@
 {
-  "name": "template-react-vite5410",
+  "name": "lesson02-practice-react-vite5410",
   "private": true,
-  "version": "0.0.4",
+  "version": "0.2.1",
   "type": "module",
   "description": "THis is vite.5.4.10 max simplifed worked with node.16.20.2",
   "scripts": {
@@ -14,6 +14,7 @@
     "chalk": "5.6.2",
     "classnames": "2.5.1",
     "normalize.css": "8.0.1",
+    "random-words": "^2.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
