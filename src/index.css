@@ -1,68 +1,32 @@
 /* @import "~normalize.css"; */
-
-/* * merriweather regular * */
-@font-face {
-  font-family: "Merriweather Sans";
-  font-style: normal;
-  font-weight: 400;
-  src: local(""),
-  url("fonts/merriweather-sans-v20-latin_cyrillic-ext-regular.woff2")
-  format("woff2"),
-  /* Chrome 26+, Opera 23+, Firefox 39+ */
-  url("fonts/merriweather-sans-v20-latin_cyrillic-ext-regular.woff")
-  format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* * merriweather medium * */
-@font-face {
-  font-family: "Merriweather Sans";
-  font-style: normal;
-  font-weight: 500;
-  src: local(""),
-    url("fonts/merriweather-sans-v20-latin_cyrillic-ext-500.woff2")
-      format("woff2"),
-      /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("fonts/merriweather-sans-v20-latin_cyrillic-ext-500.woff")
-      format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    }
-    
-    /* * merriweather bold * */
-@font-face {
-  font-family: "Merriweather Sans";
-  font-style: normal;
-  font-weight: 700;
-  src: local(""),
-    url("fonts/merriweather-sans-v20-latin_cyrillic-ext-700.woff2")
-      format("woff2"),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("fonts/merriweather-sans-v20-latin_cyrillic-ext-700.woff")
-      format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
+@import "/node_modules/normalize.css/normalize.css";
+@import '/src/style/fonts.css';
 
 :root {
   --black: #333333;
   --orange: #cc6633;
   --blue: #285784;
   --green: #5bb12c;
-  --white: hsl(0, 0%, 100%);
-  --grayF5: rgb(245, 245, 245);
-  --greyED: rgb(237, 237, 237);
-  --greyE6: rgb(230, 230, 230);
-  --greyD9: rgb(217, 217, 217);
-  --greyBF: rgb(191, 191, 191);
-  --grey99: rgb(153, 153, 153);
-  --grey66: rgb(102, 102, 102);
+  --white: #ffffff;
+  --grayF5: #f5f5f5;
+  --greyED: #ededed;
+  --greyE6: #e6e6e6;
+  --greyD9: #d9d9d9;
+  --greyBF: #bfbfbf;
+  --grey99: #999999;
+  --grey66: #666666;
 }
 
-html {
-  position: relative;
-  box-sizing: border-box;
-}
 
 *,
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+html {
+  position: relative;
+  box-sizing: border-box;
 }
 
 body {
@@ -75,6 +39,7 @@ body {
   color: var(--black);
 }
 
+svg,
 img {
   max-width: 100%;
   height: auto;
@@ -88,6 +53,7 @@ button {
 a {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
 ul {
@@ -109,6 +75,15 @@ iframe {
   border: none;
 }
 
+
+.container {
+  padding: 0 30px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1240px;
+}
+
+
 /* hidden */
 .visually-hidden {
   position: absolute;
@@ -119,4 +94,6 @@ iframe {
   height: 1px;
   width: 1px;
   overflow: hidden;
+  scale: 0;
+  transform: scale(0);
 }
