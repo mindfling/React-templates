@@ -11,7 +11,5 @@ console.log(chalk[textColor](`${textColor} main jsx`));
 
 const root = createRoot(document.querySelector('#root'));
 root.render(
-  <StrictMode>
     <App />
-  </StrictMode>
 );

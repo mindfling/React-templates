@@ -1,4 +1,5 @@
 import chalk from 'chalk';
+import { Header } from './components/Header/Header';
 
 
 function App() {
@@ -6,10 +7,9 @@ function App() {
 
   return (
     <>
-      <div className="container">
-        <h1 className="title">Заголовок</h1>
-        <h2 className="subtitle">Подзаголовок</h2>
-      </div>
+
+      <Header />
+
     </>
   );
 }

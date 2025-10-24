@@ -1,4 +1,4 @@
-# React-templates
+﻿# React-templates
 
 ME React js course templates
 
@@ -91,3 +91,7 @@ empty fragment
 <>
 </>
 ```
+
+## hygen should work only at CRA
+
+on Create React App
