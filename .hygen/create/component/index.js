@@ -4,17 +4,17 @@ module.exports = {
       {
         type: 'input',
         name: 'component_name',
-        message: 'Имя компонента',
+        message: 'Type the name of the Component ',
       },
       {
         type: 'input',
         name: 'dir',
-        message: 'Вложенная директория?(Optional)'
+        message: 'Nested directory in which the Component is? (by default) '
       }
     ]
 
-
     return inquirer.prompt(questions).then(answers => {
+      console.log('Lets make a Component');
       const {component_name, dir} = answers;
       const path = `${dir ? `${dir}/` : ''}${component_name}`;
       const absPath = `src/components/${path}`;
