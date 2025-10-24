@@ -3,11 +3,19 @@
   max-width: 1420px;
   padding: 0 15px;
   margin: 0 auto;
+  /* todo  */
   border: 1px solid lawngreen;
 }
 
 @media (min-width: 768px) {
   .container {
     padding: 0 30px;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    /* todo */
+    border: 1px solid orangered;
   }
 }
