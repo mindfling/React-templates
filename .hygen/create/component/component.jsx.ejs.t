@@ -7,7 +7,7 @@ export const <%= component_name %> = () => {
   
   return (
     <>
-      <div className={style.header}>
+      <div className={style.<%= component_name %>}>
         <div className="container">
           
         </div>
