@@ -1,0 +1,14 @@
+.logo {
+  display: block;
+  transition: box-shadow 200ms ease;
+}
+
+.logo:hover {
+  opacity: .9;
+  box-shadow: 0px 0px 25px 9px #e442077d;
+}
+  
+.link {
+  display: block;
+  text-decoration: none;
+}
