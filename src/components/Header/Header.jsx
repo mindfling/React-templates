@@ -18,7 +18,7 @@ export const Header = () => {
             <Logo />
             <Headling text='Blogget' />
             <Search />
-            <Auth />
+            <Auth auth={true} />
           </div>
         </Layout>
       </header>
