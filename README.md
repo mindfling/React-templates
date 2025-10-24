@@ -39,6 +39,10 @@ also in `package.json`
     "build": "vite build",
 ```
 
+```sh
+npm i -D hygen
+```
+
 and fixed dependences
 
 ```js
