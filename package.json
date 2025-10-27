@@ -2,7 +2,6 @@
   "name": "lesson02-practice-react-vite5410",
   "private": true,
   "version": "0.2.1",
-  "type": "module",
   "description": "THis is vite.5.4.10 max simplifed worked with node.16.20.2",
   "scripts": {
     "dev": "vite",
