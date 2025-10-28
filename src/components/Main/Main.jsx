@@ -1,14 +1,11 @@
 import style from './Main.module.css';
 
-export const Main = () => {
-  
+export const Main = ({ children }) => {
   return (
     <>
-      <div className={style.Main}>
-        <div className="container">
-          
-        </div>
-      </div>
+      <main className={style.main}>
+        { children }
+      </main>
     </>
   )
 }
