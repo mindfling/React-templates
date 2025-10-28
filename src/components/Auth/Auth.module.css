@@ -6,10 +6,19 @@
   display: flex;
   background-color: transparent;
   border: 0;
+  border-radius: 32px;
   cursor: pointer;
   color: #CC6633;
+  outline: none;
+  outline-offset: 2px;
+  transition: box-shadow 200ms ease;
 }
 .button:hover {
+  color: #e55f1c;
+  box-shadow: 0px 0px 21px 6px #e55f1c80;
+}
+.button:focus {
+  outline: 2px solid lawngreen;
   color: #e55f1c;
 }
 
