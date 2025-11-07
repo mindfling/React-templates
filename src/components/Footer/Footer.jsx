@@ -6,7 +6,7 @@ export const Footer = () => {
     <>
       <div className={style.footer}>
         <div className="container">
-          
+          <p>THis is Footer</p>
         </div>
       </div>
     </>
