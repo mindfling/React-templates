@@ -126,17 +126,18 @@
   background-color: transparent;
   background-size: 100%;
   transition: background-color 0.36s ease-in-out;
+  cursor: pointer;
 }
 .up:active,
 .down:active {
   background-color: #ff9966;
 }
 .up {
-  background-image: url('./img/up.svg');
+  background-image: url('./imgPost/up.svg');
 }
 
 .down {
-  background-image: url('./img/down.svg');
+  background-image: url('./imgPost/down.svg');
 }
 
 .ups {
@@ -161,9 +162,9 @@
     height: 25px;
   }
 
-.linkPost {
-    font-size: 26px;
-  }
+  .linkPost {
+      font-size: 26px;
+    }
   .linkPost:hover {
     color: #cc6633;
   }
