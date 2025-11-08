@@ -7,8 +7,12 @@
     "dev": "vite",
     "start": "vite --open",
     "build": "vite build",
-    "preview": "vite preview",
-    "component": "hygen create component"
+    "com": "hygen create component",
+    "comp": "hygen create component",
+    "component": "hygen create component",
+    "class": "hygen new classcomponent",
+    "func": "hygen new functioncomp",
+    "preview": "vite preview"
   },
   "dependencies": {
     "chalk": "5.6.2",
