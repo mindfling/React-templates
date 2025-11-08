@@ -1,7 +1,7 @@
 import style from './Main.module.css';
 import Layout from '../Layout';
 import Tabs from './Tabs';
-// import List from './List';
+import List from './List';
 
 export const Main = ({ children }) => {
   return (
@@ -9,7 +9,7 @@ export const Main = ({ children }) => {
       <main className={style.main}>
         <Layout>
           <Tabs />
-          {/* <List /> */}
+          <List />
         </Layout>
       </main>
     </>

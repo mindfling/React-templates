@@ -1,0 +1,8 @@
+/* * THis is styles for List component */
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
