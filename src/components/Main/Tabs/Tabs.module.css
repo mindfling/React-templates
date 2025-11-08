@@ -1,0 +1,9 @@
+/* * THis is styles for Tabs component */
+
+.tabs {
+  display: block;
+}
+
+.list {
+  display: flex;
+}
