@@ -3,19 +3,8 @@
 import style from './Post.module.css';
 import PropTypes from 'prop-types';
 import notphoto from './imgPost/notphoto.jpg';
+import formatDate from '../../../../utils/formatDate';
 
-// * функция форматирования времения
-const formatDate = (date) => {
-  const options = {
-    hour: 'numeric',
-    minute: 'numeric',
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  }
-  return new Intl.DateTimeFormat('ru', options)
-    .format(new Date(date));
-}
 
 // * функциональный компонент Post
 export const Post = ({ postData }) => {
@@ -43,7 +32,7 @@ export const Post = ({ postData }) => {
           </div>
 
           <button className={style.delete} aria-label='Удалить текущий пост' title='Удалить пост'>
-            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg className="svg" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M8.4375 4.3125H8.25C8.35313 4.3125 8.4375 4.22813 8.4375
                 4.125V4.3125H15.5625V4.125C15.5625 4.22813 15.6469 4.3125 15.75

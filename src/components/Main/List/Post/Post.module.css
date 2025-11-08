@@ -2,12 +2,12 @@
 
 .postItem {
   width: 100%;
-  flex: 1 1 550px;
+  flex: 1 1 600px;
 }
 
 .post {
   position: relative;
-  flex: 1 1 550px;
+  /* flex: 1 1 550px; */
   display: grid;
   grid-template-rows: 1fr min-content;
   grid-template-columns: 120px 1fr;
