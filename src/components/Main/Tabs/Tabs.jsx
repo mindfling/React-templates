@@ -4,16 +4,38 @@ import style from './Tabs.module.css';
 import PropTypes from 'prop-types';
 
 
+const tabsList = [
+  {
+    title: 'Главная',
+    href: '#',
+  },
+  {
+    title: 'Просмотренные',
+    href: '#',
+  },
+  {
+    title: 'Сохраненные',
+    href: '#',
+  },
+  {
+    title: 'Мои посты',
+    href: '#',
+  },
+]
+
 export const Tabs = (props) => {
   console.log('Functional Tabs loaded');
 
   return (
     <>
       <ul className={style.list}>
-        <li><a href="/">Главная</a></li>
-        <li><a href="/">Просмотренные</a></li>
-        <li><a href="/">Сохраненные</a></li>
-        <li><a href="/">Мои посты</a></li>
+        {tabsList.map(item => (<>
+          <li className={style.item}>
+            <a className={style.link} href={item.href} title={`Перейти на страницу ${item.title} нашего блога`}>
+              {item.title}
+            </a>
+          </li>
+        </>))}
       </ul>
     </>
   );
