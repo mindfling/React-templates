@@ -8,20 +8,16 @@ export const List = () => {
   console.log('Functional List loaded');
   const postData = {
     thumbnail: '',
-    title: 'Title Заголовок поста',
-    author: 'Автор John Doe nickname',
-    ups: 24,
-    date: '2025-02-24T09:00:00.000Z',
+    title: 'Title Заголовок',
+    author: 'John Doe',
+    ups: 124,
+    date: '2025-02-24T12:05:00.000Z',
   };
 
   return (
     <>
-      <h2>list title</h2>
+      <h2>Список текущих постов</h2>
       <ul className={style.list}>
-        <Post postData={postData} />
-        <Post postData={postData} />
-        <Post postData={postData} />
-        <Post postData={postData} />
         <Post postData={postData} />
         <Post postData={postData} />
         <Post postData={postData} />

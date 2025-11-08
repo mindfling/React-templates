@@ -1,5 +1,10 @@
 /* * THis is styles for Post component */
 
+.postItem {
+  width: 100%;
+  flex: 1 1 550px;
+}
+
 .post {
   position: relative;
   flex: 1 1 550px;
@@ -29,7 +34,7 @@
   border: 0;
   background-color: transparent;
   color: var(--grey99);
-  transition: color .36s ease-in-out;
+  transition: color .2s ease-in-out;
   outline: 2px solid transparent;
   border-radius: 6px;
 }
@@ -94,7 +99,7 @@
   line-height: 130%;
   color: #2d2d2d;
   margin-bottom: 10px;
-  transition: color 0.36s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 
 .linkPost:after {
@@ -110,7 +115,7 @@
   font-size: 12px;
   line-height: 14px;
   color: #cc6633;
-  transition: color 0.36s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 
 .linkAuthor:hover {
@@ -125,7 +130,7 @@
   border: 0;
   background-color: transparent;
   background-size: 100%;
-  transition: background-color 0.36s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
   cursor: pointer;
 }
 .up:active,
@@ -185,8 +190,8 @@
   .down {
     width: 24px;
     height: 24px;
-    transition: outline-color 0.36s ease-in-out,
-      background-color 0.36s ease-in-out;
+    transition: outline-color 0.2s ease-in-out,
+      background-color 0.3s ease-in-out;
     outline: 1px solid transparent;
     border-radius: 50%;
     outline-offset: 3px;

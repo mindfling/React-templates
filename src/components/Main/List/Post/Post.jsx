@@ -2,30 +2,47 @@
 // import React from 'react';
 import style from './Post.module.css';
 import PropTypes from 'prop-types';
-import photo from './imgPost/notphoto.jpg';
+import notphoto from './imgPost/notphoto.jpg';
 
+// * функция форматирования времения
+const formatDate = (date) => {
+  const options = {
+    hour: 'numeric',
+    minute: 'numeric',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  }
+  return new Intl.DateTimeFormat('ru', options)
+    .format(new Date(date));
+}
+
+// * функциональный компонент Post
 export const Post = ({ postData }) => {
   console.log('Functional Post loaded');
   const { title, author, ups, date } = postData;
-  console.log('title: ', title);
-  console.log('author: ', author);
-  console.log('ups: ', ups);
-  console.log('date: ', date);
-  console.log('postData: ', postData);
+  console.log('title, author, ups, date: ', title, author, ups, date);
 
   return (
     <>
-      <li className={style.post}>
-        <img className={style.img} src={photo} alt="photo title" />
-        <div className={style.content}>
-          <h2 className={style.title}>{title}</h2>
-          <a className={style.linkAuthor} href={`/?author=john`}>{author}</a>
-          <p className={style.rating}>
-            <span className={style.up}></span>
-            <span className={style.ups}>25</span>
-            <span className={style.down}></span>
-          </p>
-          <button className={style.delete}>
+      <li className={style.postItem}>
+        <article className={style.post}>
+          <img className={style.img} src={notphoto} alt='not photo placeholder' />
+
+          <div className={style.content}>
+            <h2 className={style.title} title={`Полное название текущего поста ${title}`}>
+              <a className={style.linkPost} href='#post'>{title}</a>
+            </h2>
+            <a className={style.linkAuthor} href={'#author'} title={`Автор текущего поста ${author}`}>{author}</a>
+          </div>
+
+          <div className={style.rating}>
+            <button className={style.up} aria-label='Увеличить рейтинг поста' title='Увеличить рейтинг' />
+            <p className={style.ups} title={`Текущий рейтинг поста ${ups}`}>{ups}</p>
+            <button className={style.down} aria-label='Уменьшить рейтинг поста' title='Уменьшить рейтинг' />
+          </div>
+
+          <button className={style.delete} aria-label='Удалить текущий пост' title='Удалить пост'>
             <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M8.4375 4.3125H8.25C8.35313 4.3125 8.4375 4.22813 8.4375
@@ -40,11 +57,12 @@ export const Post = ({ postData }) => {
                 7.5V6.75C21 6.33516 20.6648 6 20.25 6ZM17.1398
                 19.6875H6.86016L6.29297 7.6875H17.707L17.1398 19.6875Z"
                 fill="currentColor"
-              />
+                />
             </svg>
           </button>
-          <p className={style.date}>12.09.2025, 03:45</p>
-        </div>
+
+          <time className={style.date} dateTime={date} title={`Дата создания текущего поста ${date}`}>{formatDate(date)}</time>
+        </article>
       </li>
     </>
   );
