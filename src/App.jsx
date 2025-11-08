@@ -1,22 +1,19 @@
 import chalk from 'chalk';
+// * by export Header
+// import { Header } from './components/Header/Header';
+// * by export default
 import Header from './components/Header';
 import Main from './components/Main';
 import Layout from './components/Layout';
-import Footer from './components/Footer';
 
 
-const App = () => {
+function App() {
   console.log(chalk.blueBright('App hallo'));
 
   return (
     <>
       <Header />
-      <Main>
-        <Layout>
-          <h2 className='title'>THis is Site Title</h2>
-        </Layout>
-      </Main>
-      <Footer />
+      <Main />
     </>
   );
 }
