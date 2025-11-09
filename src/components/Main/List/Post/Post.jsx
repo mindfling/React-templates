@@ -2,7 +2,7 @@
 // import React from 'react';
 import style from './Post.module.css';
 import PropTypes from 'prop-types';
-import notphoto from './imgPost/notphoto.jpg';
+import notphoto from './img/notphoto.jpg';
 import formatDate from '../../../../utils/formatDate';
 
 
@@ -16,8 +16,10 @@ export const Post = ({ postData }) => {
     <>
       <li className={style.postItem}>
         <article className={style.post}>
+          PostImage
           <img className={style.img} src={notphoto} alt='not photo placeholder' />
 
+          PostContent
           <div className={style.content}>
             <h2 className={style.title} title={`Полное название текущего поста ${title}`}>
               <a className={style.linkPost} href='#post'>{title}</a>
@@ -25,6 +27,7 @@ export const Post = ({ postData }) => {
             <a className={style.linkAuthor} href={'#author'} title={`Автор текущего поста ${author}`}>{author}</a>
           </div>
 
+          PostRating
           <div className={style.rating}>
             <button className={style.up} aria-label='Увеличить рейтинг поста' title='Увеличить рейтинг' />
             <p className={style.ups} title={`Текущий рейтинг поста ${ups}`}>{ups}</p>
