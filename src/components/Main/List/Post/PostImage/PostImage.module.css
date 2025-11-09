@@ -1,0 +1,12 @@
+/* * THis is styles for PostImage component */
+.postimage {
+  display: block;
+}
+
+
+.img {
+  grid-area: img;
+  border-radius: 20px;
+  align-self: center;
+}
+

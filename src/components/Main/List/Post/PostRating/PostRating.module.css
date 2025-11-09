@@ -1,0 +1,51 @@
+/* * THis is styles for PostRating component */
+.postrating {
+  display: block;
+}
+
+
+.rating {
+  grid-area: rating;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+  padding-right: 10px;
+  padding-top: 20px;
+}
+
+
+
+.up,
+.down {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  border: 0;
+  background-color: transparent;
+  background-size: 100%;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+}
+.up:active,
+.down:active {
+  background-color: #ff9966;
+}
+.up {
+  background-image: url('./imgPost/up.svg');
+}
+
+.down {
+  background-image: url('./imgPost/down.svg');
+}
+
+.ups {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 130%;
+  color: #8f8f8f;
+}
+
+
+
