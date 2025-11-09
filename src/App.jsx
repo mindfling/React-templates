@@ -1,10 +1,7 @@
 import chalk from 'chalk';
-// * by export Header
-// import { Header } from './components/Header/Header';
-// * by export default
 import Header from './components/Header';
 import Main from './components/Main';
-import Layout from './components/Layout';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -14,6 +11,7 @@ function App() {
     <>
       <Header />
       <Main />
+      <Footer />
     </>
   );
 }
