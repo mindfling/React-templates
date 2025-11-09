@@ -7,7 +7,8 @@ const formatDate = (date) => {
     hour: 'numeric',
     minute: 'numeric',
   }
-  return new Intl.DateTimeFormat('ru', options)
+  //todo
+  return new Intl.DateTimeFormat('eng', options)
     .format(new Date(date));
 }
 
