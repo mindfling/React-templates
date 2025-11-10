@@ -1,7 +1,13 @@
 /* * THis is styles for PostTime component */
-
 .posttime {
   display: block;
+  opacity: .6;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+
+.posttime:hover {
+  opacity: 1;
 }
 
 .date {
