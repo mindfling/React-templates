@@ -3,46 +3,59 @@
 import style from './Tabs.module.css';
 import PropTypes from 'prop-types';
 
-
+// список меню
 const tabsList = [
   {
-    title: 'Главная',
+    value: 'Главная',
     href: '#',
+    slug: 'home',
+    id: 0,
   },
   {
-    title: 'Просмотренные',
+    value: 'Просмотренные',
     href: '#',
+    slug: 'visited',
+    id: 1,
   },
   {
-    title: 'Сохраненные',
+    value: 'Сохраненные',
     href: '#',
+    slug: 'saved',
+    id: 2,
   },
   {
-    title: 'Мои посты',
+    value: 'Мои посты',
     href: '#',
+    slug: 'myposts',
+    id: 3,
   },
-]
+];
 
-export const Tabs = (props) => {
+export const Tabs = () => {
   console.log('Functional Tabs loaded');
+  console.log('tabsList: ', tabsList);
 
+  // todo better key index
   return (
     <>
       <ul className={style.list}>
-        {tabsList.map(item => (<>
-          <li className={style.item}>
-            <a className={style.link} href={item.href} title={`Перейти на страницу ${item.title} нашего блога`}>
-              {item.title}
+        {tabsList.map((tab) => (
+          <li className={style.item} key={tab.id}>
+            <a
+              className={style.link}
+              href={`#${tab.slug}`}
+              title={`Перейти на страницу ${tab.value} нашего блога `}
+            >
+              {tab.value}
             </a>
           </li>
-        </>))}
+        ))}
       </ul>
     </>
   );
 };
 
-
-// props validation
-Tabs.propTypes = {
-  tabs: PropTypes.array,
-};
+// // props validation
+// Tabs.propTypes = {
+//   tabs: PropTypes.array,
+// };

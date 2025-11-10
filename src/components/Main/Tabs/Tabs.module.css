@@ -20,6 +20,7 @@
   opacity: .7;
   transition: opacity 200ms ease-in-out;
 }
+
 .link:hover {
   opacity: 1;
 }
