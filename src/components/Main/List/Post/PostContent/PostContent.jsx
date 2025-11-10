@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 
 export const PostContent = ({title, author}) => {
-  console.log('Functional PostContent loaded');
+  // console.log('Functional PostContent loaded');
 
   return (
     <>
