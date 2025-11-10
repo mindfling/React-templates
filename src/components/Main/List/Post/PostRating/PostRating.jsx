@@ -1,11 +1,10 @@
-/* eslint-disable */
 import { useState } from 'react';
 import style from './PostRating.module.css';
 import PropTypes from 'prop-types';
 
 export const PostRating = ({ ups }) => {
   const [rating, setRating] = useState(ups);
-  console.log(`Functional PostRating loaded\ncurrent rating is ${rating}`);
+  // console.log(`Functional PostRating loaded\ncurrent rating is ${rating}`);
 
   const handleInc = () => {
     setRating((rating) => rating + 1);
