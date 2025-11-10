@@ -7,6 +7,7 @@ import formatDate from '../../../../utils/formatDate';
 
 import { PostImage } from './PostImage/PostImage';
 import { PostContent } from './PostContent/PostContent';
+import { PostRating } from './PostRating/PostRating';
 
 
 // * функциональный компонент Post
@@ -30,12 +31,12 @@ export const Post = ({ postData }) => {
             <a className={style.linkAuthor} href={'#author'} title={`Автор текущего поста ${author}`}>{author}</a>
           </div> */}
 
-          PostRating
-          <div className={style.rating}>
+          <PostRating ups={37} />
+          {/* <div className={style.rating}>
             <button className={style.up} aria-label='Увеличить рейтинг поста' title='Увеличить рейтинг' />
             <p className={style.ups} title={`Текущий рейтинг поста ${ups}`}>{ups}</p>
             <button className={style.down} aria-label='Уменьшить рейтинг поста' title='Уменьшить рейтинг' />
-          </div>
+          </div> */}
 
           PostDelete
           <button className={style.delete} aria-label='Удалить текущий пост' title='Удалить пост'>

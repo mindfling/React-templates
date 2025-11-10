@@ -7,7 +7,6 @@ export const PostRating = ({ups}) => {
   console.log('Functional PostRating loaded');
   return (
     <>
-      {/* PostRating */}
       <div className={style.rating}>
         <button className={style.up} aria-label='Увеличить рейтинг поста' title='Увеличить рейтинг' />
         <p className={style.ups} title={`Текущий рейтинг поста ${ups}`}>{ups}</p>
