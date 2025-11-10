@@ -20,5 +20,6 @@ export const PostContent = ({title, author}) => {
 
 // todo props validation
 PostContent.propTypes = {
-  max: PropTypes.number,
+  title: PropTypes.string,
+  author: PropTypes.string,
 };

@@ -6,6 +6,7 @@ import notphoto from './img/notphoto.jpg';
 import formatDate from '../../../../utils/formatDate';
 
 import { PostImage } from './PostImage/PostImage';
+import { PostContent } from './PostContent/PostContent';
 
 
 // * функциональный компонент Post
@@ -21,13 +22,13 @@ export const Post = ({ postData }) => {
           <PostImage />
           {/* <img className={style.img} src={notphoto} alt='not photo placeholder' /> */}
 
-          PostContent
-          <div className={style.content}>
+          <PostContent title={title} author={author} />
+          {/* <div className={style.content}>
             <h2 className={style.title} title={`Полное название текущего поста ${title}`}>
               <a className={style.linkPost} href='#post'>{title}</a>
             </h2>
             <a className={style.linkAuthor} href={'#author'} title={`Автор текущего поста ${author}`}>{author}</a>
-          </div>
+          </div> */}
 
           PostRating
           <div className={style.rating}>
