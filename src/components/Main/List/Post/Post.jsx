@@ -8,6 +8,7 @@ import formatDate from '../../../../utils/formatDate';
 import { PostImage } from './PostImage/PostImage';
 import { PostContent } from './PostContent/PostContent';
 import { PostRating } from './PostRating/PostRating';
+import { PostDeleteBtn } from './PostDeleteBtn/PostDeleteBtn';
 
 
 // * функциональный компонент Post
@@ -38,8 +39,8 @@ export const Post = ({ postData }) => {
             <button className={style.down} aria-label='Уменьшить рейтинг поста' title='Уменьшить рейтинг' />
           </div> */}
 
-          PostDelete
-          <button className={style.delete} aria-label='Удалить текущий пост' title='Удалить пост'>
+          <PostDeleteBtn />
+          {/* <button className={style.delete} aria-label='Удалить текущий пост' title='Удалить пост'>
             <svg className="svg" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M8.4375 4.3125H8.25C8.35313 4.3125 8.4375 4.22813 8.4375
@@ -56,7 +57,7 @@ export const Post = ({ postData }) => {
                 fill="currentColor"
                 />
             </svg>
-          </button>
+          </button> */}
 
           PostTime
           <time className={style.date} dateTime={date} title={`Дата создания текущего поста ${date}`}>{formatDate(date)}</time>
