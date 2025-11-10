@@ -1,17 +1,8 @@
-/* eslint-disable */
 // import React from 'react';
 import style from './PostDeleteBtn.module.css';
-import PropTypes from 'prop-types';
-
-
-const handle = (e) => {
-  const number = Math.random();
-  return number;
-};
 
 export const PostDeleteBtn = () => {
-  console.log('Functional PostDeleteBtn loaded');
-
+  // console.log('Functional PostDeleteBtn loaded');
   return (
     <>
       <button className={style.delete} aria-label='Удалить текущий пост' title='Удалить пост'>
