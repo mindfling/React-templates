@@ -9,6 +9,7 @@ import { PostImage } from './PostImage/PostImage';
 import { PostContent } from './PostContent/PostContent';
 import { PostRating } from './PostRating/PostRating';
 import { PostDeleteBtn } from './PostDeleteBtn/PostDeleteBtn';
+import { PostTime } from './PostTime/PostTime';
 
 
 // * функциональный компонент Post
@@ -59,8 +60,15 @@ export const Post = ({ postData }) => {
             </svg>
           </button> */}
 
-          PostTime
-          <time className={style.date} dateTime={date} title={`Дата создания текущего поста ${date}`}>{formatDate(date)}</time>
+          <PostTime date={date} />
+          {/* 
+            <time
+              className={style.date}
+              dateTime={date}
+              title={`Дата создания текущего поста ${date}`}
+            >
+              {formatDate(date)}
+            </time> */}
         </article>
       </li>
     </>
