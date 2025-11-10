@@ -1,19 +1,18 @@
 import style from './PostImage.module.css';
 import PropTypes from 'prop-types';
-import photo from "./img/notphoto.jpg";
+import notphoto from "./img/notphoto.jpg";
 
 
-export const PostImage = () => {
-  console.log('Functional PostImage loaded');
+export const PostImage = ({photo}) => {
   return (
     <>
-      <img className={style.img} src={photo} alt="not photo placeholder" />
+      {!photo && <img className={style.img} src={notphoto} alt="placeholder not a photo" />}
     </>
   );
 };
 
 
-// todo props validation
+// todo props validation and image photo notphoto
 PostImage.propTypes = {
   photo: PropTypes.string,
 };
