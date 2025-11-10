@@ -5,6 +5,8 @@ import PropTypes from 'prop-types';
 import notphoto from './img/notphoto.jpg';
 import formatDate from '../../../../utils/formatDate';
 
+import { PostImage } from './PostImage/PostImage';
+
 
 // * функциональный компонент Post
 export const Post = ({ postData }) => {
@@ -16,8 +18,8 @@ export const Post = ({ postData }) => {
     <>
       <li className={style.postItem}>
         <article className={style.post}>
-          PostImage
-          <img className={style.img} src={notphoto} alt='not photo placeholder' />
+          <PostImage />
+          {/* <img className={style.img} src={notphoto} alt='not photo placeholder' /> */}
 
           PostContent
           <div className={style.content}>
@@ -34,6 +36,7 @@ export const Post = ({ postData }) => {
             <button className={style.down} aria-label='Уменьшить рейтинг поста' title='Уменьшить рейтинг' />
           </div>
 
+          PostDelete
           <button className={style.delete} aria-label='Удалить текущий пост' title='Удалить пост'>
             <svg className="svg" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -53,6 +56,7 @@ export const Post = ({ postData }) => {
             </svg>
           </button>
 
+          PostTime
           <time className={style.date} dateTime={date} title={`Дата создания текущего поста ${date}`}>{formatDate(date)}</time>
         </article>
       </li>
