@@ -1,7 +1,7 @@
-/* eslint-disable */
 // import React from 'react';
 import style from './Tabs.module.css';
 import PropTypes from 'prop-types';
+import { assignId } from '../../../utils/generateRandomId'
 
 // список меню
 const tabsList = [
@@ -9,33 +9,27 @@ const tabsList = [
     value: 'Главная',
     href: '#',
     slug: 'home',
-    id: 0,
   },
   {
     value: 'Просмотренные',
     href: '#',
     slug: 'visited',
-    id: 1,
   },
   {
     value: 'Сохраненные',
     href: '#',
     slug: 'saved',
-    id: 2,
   },
   {
     value: 'Мои посты',
     href: '#',
     slug: 'myposts',
-    id: 3,
   },
-];
+].map(assignId);
+console.log('tabsList: ', tabsList);
 
 export const Tabs = () => {
-  console.log('Functional Tabs loaded');
-  console.log('tabsList: ', tabsList);
 
-  // todo better key index
   return (
     <>
       <ul className={style.list}>
@@ -44,7 +38,7 @@ export const Tabs = () => {
             <a
               className={style.link}
               href={`#${tab.slug}`}
-              title={`Перейти на страницу ${tab.value} нашего блога `}
+              title={`Перейти на страницу ${tab.value} нашего блога ${tab.id}`}
             >
               {tab.value}
             </a>
@@ -55,7 +49,7 @@ export const Tabs = () => {
   );
 };
 
-// // props validation
-// Tabs.propTypes = {
-//   tabs: PropTypes.array,
-// };
+// props validation
+Tabs.propTypes = {
+  tabs: PropTypes.array,
+};
