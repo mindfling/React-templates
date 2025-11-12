@@ -2,7 +2,6 @@ import style from './Auth.module.css';
 import loginImg from './img/login.svg';
 
 export const Auth = ({ auth }) => {
-  console.log('Auth IMG');
 
   return (
     <>

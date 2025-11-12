@@ -12,21 +12,20 @@ const tabsList = [
   },
   {
     value: 'Просмотренные',
-    href: '#',
     slug: 'visited',
+    href: '#',
   },
   {
     value: 'Сохраненные',
-    href: '#',
     slug: 'saved',
+    href: '#',
   },
   {
     value: 'Мои посты',
-    href: '#',
     slug: 'myposts',
+    href: '#',
   },
 ].map(assignId);
-console.log('tabsList: ', tabsList);
 
 export const Tabs = () => {
 
@@ -49,7 +48,7 @@ export const Tabs = () => {
   );
 };
 
-// props validation
+
 Tabs.propTypes = {
   tabs: PropTypes.array,
 };

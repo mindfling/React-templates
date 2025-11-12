@@ -1,14 +1,13 @@
 import style from './Header.module.css';
 import Layout from '../Layout';
 import Logo from '../Logo';
-// import LogoSvg from '../LogoSvg';
 import Headling from '../Headling';
 import Search from '../Search';
 import Auth from '../Auth';
 
 
+// todo all children inside Header
 export const Header = () => {
-  console.log('Header');
 
   return (
     <>

@@ -4,6 +4,7 @@ import notphoto from "./img/notphoto.jpg";
 
 
 export const PostImage = ({photo}) => {
+  // todo photo and nophoto
   return (
     <>
       {!photo && <img className={style.img} src={notphoto} alt="placeholder not a photo" />}
@@ -12,7 +13,6 @@ export const PostImage = ({photo}) => {
 };
 
 
-// todo props validation and image photo notphoto
 PostImage.propTypes = {
   photo: PropTypes.string,
 };

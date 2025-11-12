@@ -1,8 +1,7 @@
 import style from './LogoSvg.module.css';
 
+
 export const LogoSvg = () => {
-  console.log('Logo SVG');
-  
   return (
     <>
       <a
@@ -17,5 +16,5 @@ export const LogoSvg = () => {
         </svg>
       </a>
     </>
-  )
-}
+  );
+};

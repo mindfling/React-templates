@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 export const PostRating = ({ ups }) => {
   const [rating, setRating] = useState(ups);
-  // console.log(`Functional PostRating loaded\ncurrent rating is ${rating}`);
 
   const handleInc = () => {
     setRating((rating) => rating + 1);
@@ -40,7 +39,7 @@ export const PostRating = ({ ups }) => {
   );
 };
 
-// props validation
+
 PostRating.propTypes = {
   ups: PropTypes.number,
 };

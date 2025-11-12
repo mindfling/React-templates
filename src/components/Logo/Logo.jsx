@@ -2,7 +2,6 @@ import style from './Logo.module.css';
 import logo from './logo.svg';
 
 export const Logo = () => {
-  console.log('Logo image');
   
   return (
     <>
