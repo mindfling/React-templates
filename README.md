@@ -47,8 +47,13 @@ and fixed dependences
 
 ```js
   "dependencies": {
-    "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "chalk": "5.6.2",
+    "classnames": "2.5.1",
+    "normalize.css": "8.0.1",
+    "prop-types": "15.8.1",
+    "random-words": "2.0.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@eslint/js": "9.13.0",
@@ -60,10 +65,11 @@ and fixed dependences
     "eslint-plugin-react-hooks": "5.0.0",
     "eslint-plugin-react-refresh": "0.4.14",
     "globals": "15.11.0",
-    "vite": "5.4.10"
+    "hygen": "6.2.8",
+    "vite": "5.4.10",
+    "vite-plugin-svgr": "4.5.0"
   }
 ```
-
 
 ## StrictMode
 
@@ -72,7 +78,6 @@ and fixed dependences
     <App />
   </StrictMode>
 ```
-
 
 ## React Fragment
 
@@ -87,6 +92,7 @@ and fixed dependences
 ```
 
 empty fragment
+
 ```jsx
 <>
 </>
@@ -95,3 +101,9 @@ empty fragment
 ## hygen should work only at CRA
 
 on Create React App
+
+## hygen also works at Vite5 with CJS Modules
+
+~~"type": "module",~~
+
+## Также шрифты  "Merriweather Sans" на Кириллице НЕ работают
