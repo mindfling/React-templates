@@ -12,10 +12,13 @@
   background-color: #bebebe;
   color: #000;
 }
+
 .search::-webkit-search-cancel-button {
   display: none;
 }
-.search:focus-within {
+
+.search:focus-visible,
+.search:focus {
   border: 2px solid lawngreen;
 }
 
@@ -37,25 +40,19 @@
   outline-offset: 2px;
   color: #484848;
 }
+
 .button:hover {
-  color: #000;
+  color: var(--orange);
 }
+
+/* отрабатываем фокус на поле ввода и кнопке поиск */
 .button:focus-visible {
   outline: 2px solid lawngreen;
 }
 
-/*
-.button:focus,
-.button:focus ~ .search {
-  outline: 2px solid lawngreen;
-}
-*/
-
-:is(.search):has(+ .button:focus) {
+:is(.search):has(+ .button:focus-visible) {
   border: 2px solid lawngreen;
 }
-
-
 
 .svg {
   width: 100%;
