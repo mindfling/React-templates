@@ -3,17 +3,24 @@ export const getParseFileName = (uri) => {
   return arr.at(-1);
 }
 
+
 export const capitalize = word => `${word.charAt(0).toUpperCase()}${word.substring(1)}`;
+
 
 export const generateId = () => {
   return Math.random().toString(36).substring(2, 10);
 };
 
+
 export const generateRandomId = () => {
-  return `0x${Math.random().toString(36).substring(2, 6)}x${Date.now().toString().substring(9)}`;
+  return `${Math.random().toString(36).substring(2, 6)}0x${Date.now().toString().substring(9)}`;
 };
 
-export const assignId = (obj) => {
+
+export const assignId = (obj) => ({...obj, id: generateId()});
+
+
+export const assignRandomId = (obj) => {
   return {
     ...obj,
     id: generateRandomId(), 
