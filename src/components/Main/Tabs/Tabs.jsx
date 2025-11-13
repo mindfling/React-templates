@@ -1,32 +1,29 @@
 // import React from 'react';
-import style from './Tabs.module.css';
-import PropTypes from 'prop-types';
-import { assignId } from '../../../utils/generateRandomId'
+import style from "./Tabs.module.css";
+import PropTypes from "prop-types";
 
-
-export const Tabs = ({ list }) => {
-  console.log('list: ', list);
-
+export const Tabs = ({ list, setList }) => {
+  const handleClick = (id) => {
+    console.log('id in handleClick: ', id);
+    setList(list.filter(item => item.id !== id));
+  }
+  
   return (
-    <>
-      <ul className={style.list}>
-        {list.map((tab) => (
-          <li className={style.item} key={tab.id}>
-            <a
-              className={style.link}
-              href={`${tab.href}${tab.slug}`}
-              title={`Перейти на страницу ${tab.value} нашего блога ${tab.id}`}
-            >
-              {tab.value}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </>
+    <ul className={style.list}>
+      {list.map((tab) => (
+        <li className={style.item} key={tab.id}>
+          <button className={style.btn} id={tab.id} onClick={(e) => {
+            handleClick(e.target.id)
+          }}>
+            {tab.value}
+          </button>
+        </li>
+      ))}
+    </ul>
   );
 };
 
-
 Tabs.propTypes = {
+  list: PropTypes.array,
   tabs: PropTypes.array,
 };

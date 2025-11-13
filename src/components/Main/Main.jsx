@@ -3,6 +3,7 @@ import Layout from '../Layout';
 import Tabs from './Tabs';
 import List from './List';
 import { assignId } from '../../utils/generateRandomId';
+import { useState } from 'react';
 
 
 // список меню
@@ -23,17 +24,18 @@ const LIST = [
     value: 'Мои посты',
     slug: 'myposts',
   },
-].map(tab => ({ ...tab, href: '#' }))
-  .map(assignId);
+].map(assignId);
 
 
-export const Main = ({ children }) => {
+export const Main = () => {
+  const [list, setList] = useState(LIST);
+  console.log('list in Main: ', list);
   return (
     <>
       <main className={style.main}>
         <Layout>
-          <Tabs list={LIST}/>
-          <List />
+          <Tabs list={list} setList={setList} />
+          {/* <List /> */}
         </Layout>
       </main>
     </>
