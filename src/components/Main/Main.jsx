@@ -20,18 +20,14 @@ export const Main = () => {
   console.log('list in Main: ', list);
 
   const addItem = () => {
-    // todo it can be used in todo!!!
-    console.log('add item');
-    // setList(list => list.concat(assignId({value: 'New item'}))); // или так
-    setList((list) => [...list, assignId(assignId({ value: "New item" }))]); // так или
+    setList((list) => [...list, assignId(assignId({ value: "New item" }))]); // todo it can be used in todo!!!
   }
 
   return (
     <>
       <main className={style.main}>
         <Layout>
-          <button className="addItem" onClick={addItem}>Кнопка добавить todo Item</button>
-          <Tabs list={list} setList={setList} />
+          <Tabs list={list} setList={setList} addItem={addItem} />
           {/* <List /> */}
         </Layout>
       </main>
