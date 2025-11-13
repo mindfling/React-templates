@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import style from "./Tabs.module.css";
 import PropTypes from "prop-types";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { assignId } from "../../../utils/generateRandomId";
 // import { ReactComponent as ArrowIcon } from './img/arrow.svg'; // icon for CRA
 import Arrow from './img/arrow.svg?react'; // icon for Vite5
@@ -23,7 +23,25 @@ export const Tabs = () => {
   const [list, setList] = useState(LIST);
   console.log("list in Main: ", list);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [count, setCount] = useState(0);
+  const [isDropdown, setIsDropdown] = useState(true);
+
+  const handleResize = () => {
+    // todo const debounceResize = debounceRaf(handleResize) => { }
+    // открываем или закрываем меню от размера экрана
+    if (document.documentElement.clientWidth < 768) {
+      setIsDropdown(true);
+    } else {
+      setIsDropdown(false);
+    }
+  }
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    }
+  }, []);
 
   const handleClick = (id) => {
     console.log(`Click on id ${id}`);
@@ -33,17 +51,16 @@ export const Tabs = () => {
     <>
       <div className={style.container}>
         <div className={style.wrapperBtn}>
-          <button
+          {isDropdown && <button
             className={style.btn}
             onClick={() => setIsDropdownOpen((prev) => !prev)}
           >
             <span>Open menu</span>
             <Arrow width={15} height={15} />
-          </button>
+          </button>}
         </div>
 
-        {/* меню открыто если Открыто */}
-        {isDropdownOpen && (
+        {(isDropdownOpen || !isDropdown) && (
           <ul
             className={style.list}
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
