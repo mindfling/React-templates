@@ -1,7 +1,6 @@
 import style from './Auth.module.css';
 
 export const Auth = ({ auth }) => {
-  console.log('auth is authoried ', auth);
 
   return (
     <>

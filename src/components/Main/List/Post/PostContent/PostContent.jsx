@@ -1,5 +1,6 @@
 import style from './PostContent.module.css';
 import PropTypes from 'prop-types';
+import { Text } from '../../../../../UI/Text/Text';
 
 
 export const PostContent = ({title, text, author}) => {
@@ -9,7 +10,8 @@ export const PostContent = ({title, text, author}) => {
         <h2 className={style.title} title={`Содержимое поста.. ${text}`}>
           <a className={style.linkPost} href='#post'>{title}</a>
         </h2>
-        <a className={style.linkAuthor} href={'#author'} title={`Автор текущего поста ${author}`}>{author}</a>
+        <a className={style.linkAuthor} href={'#author'}>{author}</a>
+        <Text As='p' className="text" color="grey33" size={18} tsize={14} dsize={20}>{text}</Text>
       </div>
     </>
   );
@@ -19,5 +21,6 @@ export const PostContent = ({title, text, author}) => {
 // todo props validation
 PostContent.propTypes = {
   title: PropTypes.string,
+  text: PropTypes.string,
   author: PropTypes.string,
 };

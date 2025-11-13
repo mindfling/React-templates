@@ -11,7 +11,7 @@ export const Post = ({ postData }) => {
   const { id, title, text, author, nickname, ups, date } = postData;
 
   return (
-    <li className={style.postItem}>
+    <li className={style.postItem} id={id}>
       <article className={style.post}>
         <PostImage />
         <PostContent title={title} text={text} author={author} />
