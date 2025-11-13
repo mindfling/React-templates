@@ -10,35 +10,41 @@ export const Tabs = ({ list, setList, addItem }) => {
 
   const handleClick = (id) => {
     // del menu item with id
-    setList(list.filter(item => item.id !== id));
+    // setList(list.filter(item => item.id !== id));
+    console.log(`Click on id ${id}`);
   }
 
   return (
     <>
-      <button className={classNames("addItem", style.btn)}
-        onClick={() => {
-          addItem();
-          if (count <= 10) {
-            setCount(prev => prev + 1);
-          } else {
-            setIsDropdownOpen(() => true);
-          }
+      <div className={style.container}>
+        <div className={style.wrapperBtn}>
+          <button className={style.btn}
+            onClick={() => {
+              setIsDropdownOpen(prev => {
+                if (!prev) {
+                  console.log("Dropdown is Open")
+                } else {
+                  console.log("Dropdown is Close");
+                }
+                return !prev;
+              });
+            }}
+          >
+            Open menu
+          </button>
+        </div>
 
-          console.log(count);
-        }}
-      >
-        Кнопка добавить todo Item
-      </button>
+        {isDropdownOpen && <ul className={style.list} onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
+          {list.map((tab) => (
+            <li className={style.item} key={tab.id}>
+              <button className={style.btn} onClick={() => handleClick(tab.id)}>
+                {tab.value}
+              </button>
+            </li>
+          ))}
+        </ul>}
 
-      {isDropdownOpen && <ul className={style.list}>
-        {list.map((tab) => (
-          <li className={style.item} key={tab.id}>
-            <button className={style.btn} onClick={() => handleClick(tab.id)}>
-              {tab.value}
-            </button>
-          </li>
-        ))}
-      </ul>}
+      </div>
     </>
   );
 };
