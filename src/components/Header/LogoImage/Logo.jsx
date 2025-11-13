@@ -9,7 +9,7 @@ export const Logo = () => {
         href='/'
       >
         <img
-          className={style.logo}
+          className={style.image}
           src={logo}
           alt="B logo of Blogger company" />
       </a>

@@ -107,3 +107,30 @@ on Create React App
 ~~"type": "module",~~
 
 ## Также шрифты  "Merriweather Sans" на Кириллице НЕ работают
+
+## Logo by Logo svgr vite react
+
+```sh
+npm install --save-dev vite-plugin-svgr
+```
+
+```js
+import Logo from './img/logo.svg?react';
+
+export const LogoSvg = () => {
+  return (
+    <Logo />
+  );
+};
+```
+
+vite.config.js
+
+```js
+export default defineConfig({
+  server: {
+    port: 3000,
+  },
+  plugins: [svgr(), react()],
+});
+```

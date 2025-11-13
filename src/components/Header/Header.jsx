@@ -1,9 +1,11 @@
 import style from './Header.module.css';
 import Layout from '../Layout';
-import Logo from './Logo';
 import Headling from './Headling';
 import Search from './Search';
 import Auth from './Auth';
+// import Logo from './LogoImage';
+// import Logo from './LogoInline';
+import Logo from './LogoSvg';
 
 
 export const Header = () => {
