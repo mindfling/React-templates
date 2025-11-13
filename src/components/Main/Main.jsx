@@ -5,6 +5,9 @@ import List from './List';
 import { assignId } from '../../utils/generateRandomId';
 import { useState } from 'react';
 
+import { generate, count } from "random-words";
+
+
 
 // список меню
 const LIST = [
@@ -20,7 +23,8 @@ export const Main = () => {
   console.log('list in Main: ', list);
 
   const addItem = () => {
-    setList((list) => [...list, assignId(assignId({ value: "New item" }))]); // todo it can be used in todo!!!
+    const word = generate();
+    setList((list) => [...list, assignId(assignId({ value: `New ${word}` }))]); // todo it can be used in todo!!!
   }
 
   return (
