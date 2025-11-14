@@ -5,17 +5,30 @@ import { useEffect, useState } from "react";
 import { assignId } from "../../../utils/generateRandomId";
 // import { ReactComponent as ArrowIcon } from './img/arrow.svg'; // icon for CRA
 import Arrow from './img/arrow.svg?react'; // icon for Vite5
-import Home from './img/home.svg?react';
-import Eye from './img/eye.svg?react';
-import Save from './img/save.svg?react';
-import Post from './img/post.svg?react';
 
-// список меню
-const LIST = [
+import Home from './img/outline/home.svg?react';
+import Eye from './img/outline/eye.svg?react';
+import Save from './img/outline/save.svg?react';
+import Post from './img/outline/post.svg?react';
+
+import HomeIcon from './img/colored/home.svg?react';
+import TopIcon from './img/colored/top.svg?react';
+import BestIcon from './img/colored/best.svg?react';
+import HotIcon from './img/colored/hot.svg?react';
+
+// список меню исходный
+const LIST_OLD = [
   { value: 'Главная', Icon: Home},
   { value: 'Просмотренные', Icon: Eye},
   { value: 'Сохраненные', Icon: Save},
   { value: 'Мои посты', Icon: Post},
+].map(assignId);
+// список меню обновленный
+const LIST = [
+  { value: 'Главная', Icon: HomeIcon, slug: 'Main home'},
+  { value: 'Топ', Icon: TopIcon, slug: 'Top'},
+  { value: 'Лучшие', Icon: BestIcon, slug: 'The Best'},
+  { value: 'Горячие', Icon: HotIcon, slug: 'Hot tuj'},
 ].map(assignId);
 
 
@@ -65,11 +78,12 @@ export const Tabs = () => {
             className={style.list}
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
           >
-            {list.map(({value, id, Icon}) => (
+            {list.map(({value, id, Icon, slug}) => (
               <li className={style.item} key={id}>
                 <button
                   className={style.btn}
                   onClick={() => handleClick(id)}
+                  title={slug ? slug : 'Глав'}
                 >
                   <span>{value}</span>
                   {Icon && <Icon width={25} height={25} />}

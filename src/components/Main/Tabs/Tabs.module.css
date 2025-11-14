@@ -12,6 +12,7 @@
 
 .btn {
   width: 100%;
+  min-width: 164px;
   text-align: left;
   border-width: 0;
   padding: 10px 20px;
@@ -20,15 +21,31 @@
   justify-content: space-between;
   gap: 10px;
   background-color: var(--white);
-
+  scale: 1;
+  opacity: 1;
 }
 
 .btn:hover {
   background-color: var(--greyE6);
 }
 
+.btn:focus-visible {
+  outline: 1px solid lawngreen;
+  outline-offset: -2px;
+}
+
+.btn:active {
+  opacity: .8;
+}
+
+.btn svg {
+  scale: 1;
+  transition: scale 200ms ease-out;
+}
+
 .btn:hover svg{
-  color: var(--orange)
+  color: var(--orange);
+  scale: 1.3;
 }
 
 .list {
@@ -61,10 +78,14 @@
     flex-wrap: wrap;
     position: static;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
   }
 
   .item {
     border: none;
+  }
+  
+  .btn {
+    justify-content: space-around;
   }
 }
