@@ -10,6 +10,7 @@ export const Text = (props) => {
     size,
     tsize,
     dsize,
+    weight,
     className,
     children,
   } = props;
@@ -21,6 +22,7 @@ export const Text = (props) => {
     { [style[`fs${size}`]]: size },
     { [style[`fst${tsize}`]]: tsize },
     { [style[`fsd${dsize}`]]: dsize },
+    { [style[`${weight}`]]: weight },
   );
 
   console.log('classes: ', classes);
